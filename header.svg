@@ -1,0 +1,103 @@
+<svg width="880" height="300" viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Boot sequence: robotics, software, infra, AI automation. Mission: automate everything.">
+  <title>juan@bogota — boot sequence</title>
+  <style>
+    .mono { font-family: 'Courier New', 'SFMono-Regular', Consolas, Menlo, monospace; }
+    .eye { animation: blinkeye 4.2s infinite; }
+    @keyframes blinkeye { 0%, 90%, 100% { opacity: 1; } 93%, 96% { opacity: 0.05; } }
+    .pulse { animation: pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .wave { transform-box: fill-box; transform-origin: 50% 100%; animation: wave 1.15s ease-in-out infinite alternate; }
+    @keyframes wave { from { transform: scaleY(0.2); } to { transform: scaleY(1); } }
+    .scan { animation: scan 7s linear infinite; }
+    @keyframes scan { from { transform: translateY(0px); } to { transform: translateY(238px); } }
+  </style>
+
+  <!-- terminal window -->
+  <rect x="16" y="16" width="848" height="268" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- dot grid (generative backdrop) -->
+  <defs>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#21262d"/>
+    </pattern>
+    <linearGradient id="scanglow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3fb950" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#3fb950" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="typeclip">
+      <rect x="36" y="228" width="0" height="22">
+        <animate attributeName="width" from="0" to="252" begin="2.8s" dur="1.2s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="win"><rect x="16" y="16" width="848" height="268" rx="10"/></clipPath>
+  </defs>
+  <rect x="17" y="53" width="846" height="230" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- moving scanline -->
+  <g clip-path="url(#win)">
+    <rect class="scan" x="17" y="40" width="846" height="6" fill="url(#scanglow)" opacity="0.35"/>
+  </g>
+
+  <!-- window chrome -->
+  <line x1="17" y1="52" x2="863" y2="52" stroke="#30363d" stroke-width="1"/>
+  <circle cx="38" cy="34" r="6" fill="#f85149"/>
+  <circle cx="58" cy="34" r="6" fill="#d29922"/>
+  <circle cx="78" cy="34" r="6" fill="#3fb950"/>
+  <text class="mono" x="440" y="39" font-size="13" fill="#8b949e" text-anchor="middle">juan@bogota:~/mission</text>
+
+  <!-- boot log -->
+  <text class="mono" opacity="0" x="36" y="86" font-size="14" fill="#c9d1d9"><tspan fill="#3fb950">$</tspan> ./boot_juan.sh<set attributeName="opacity" to="1" begin="0.3s" fill="freeze"/></text>
+  <text class="mono" opacity="0" x="36" y="112" font-size="14" fill="#c9d1d9"><tspan fill="#3fb950">[ OK ]</tspan> robotics ........ <tspan fill="#58a6ff">ESP32 · STM32 · ROS</tspan><set attributeName="opacity" to="1" begin="0.8s" fill="freeze"/></text>
+  <text class="mono" opacity="0" x="36" y="138" font-size="14" fill="#c9d1d9"><tspan fill="#3fb950">[ OK ]</tspan> software ........ <tspan fill="#58a6ff">Python · TypeScript · FastAPI</tspan><set attributeName="opacity" to="1" begin="1.2s" fill="freeze"/></text>
+  <text class="mono" opacity="0" x="36" y="164" font-size="14" fill="#c9d1d9"><tspan fill="#3fb950">[ OK ]</tspan> infra ........... <tspan fill="#58a6ff">Docker · VPS · self-hosted</tspan><set attributeName="opacity" to="1" begin="1.6s" fill="freeze"/></text>
+  <text class="mono" opacity="0" x="36" y="190" font-size="14" fill="#c9d1d9"><tspan fill="#3fb950">[ OK ]</tspan> ai_automation ... <tspan fill="#58a6ff">n8n · agents · LLM + OCR</tspan><set attributeName="opacity" to="1" begin="2.0s" fill="freeze"/></text>
+  <text class="mono" opacity="0" x="36" y="216" font-size="14" fill="#c9d1d9"><tspan fill="#d29922">[ &gt;&gt; ]</tspan> mission ......... <tspan fill="#e6edf3" font-weight="bold">AUTOMATE_EVERYTHING</tspan><set attributeName="opacity" to="1" begin="2.4s" fill="freeze"/></text>
+
+  <!-- typed status line -->
+  <g clip-path="url(#typeclip)">
+    <text class="mono" x="36" y="245" font-size="14" fill="#3fb950">&gt; status: building in public</text>
+  </g>
+  <rect opacity="0" x="292" y="232" width="9" height="16" fill="#3fb950">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.45;0.5;1" begin="4.1s" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- right column: name -->
+  <text class="mono" opacity="0" x="724" y="96" font-size="27" font-weight="bold" fill="#e6edf3" text-anchor="middle">JUAN SILVA<set attributeName="opacity" to="1" begin="0.2s" fill="freeze"/></text>
+  <text class="mono" opacity="0" x="724" y="118" font-size="10.5" letter-spacing="2.5" fill="#3fb950" text-anchor="middle">FULL AUTOMATION ENGINEER<set attributeName="opacity" to="1" begin="0.2s" fill="freeze"/></text>
+
+  <!-- robot -->
+  <g opacity="0">
+    <set attributeName="opacity" to="1" begin="0.5s" fill="freeze"/>
+    <!-- antenna -->
+    <line x1="724" y1="140" x2="724" y2="127" stroke="#3fb950" stroke-width="2"/>
+    <circle class="pulse" cx="724" cy="123" r="4" fill="#58a6ff"/>
+    <!-- head -->
+    <rect x="686" y="140" width="76" height="54" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+    <!-- eyes -->
+    <rect class="eye" x="702" y="156" width="13" height="13" rx="2.5" fill="#3fb950"/>
+    <rect class="eye" x="733" y="156" width="13" height="13" rx="2.5" fill="#3fb950"/>
+    <!-- mouth grill -->
+    <rect x="708" y="178" width="7" height="4" rx="1" fill="#30363d"/>
+    <rect x="720" y="178" width="7" height="4" rx="1" fill="#30363d"/>
+    <rect x="732" y="178" width="7" height="4" rx="1" fill="#30363d"/>
+    <!-- ears -->
+    <rect x="678" y="158" width="6" height="18" rx="2" fill="#30363d"/>
+    <rect x="764" y="158" width="6" height="18" rx="2" fill="#30363d"/>
+  </g>
+
+  <!-- voice waveform -->
+  <g opacity="0">
+    <set attributeName="opacity" to="1" begin="0.9s" fill="freeze"/>
+    <rect class="wave" style="animation-delay:0.00s" x="670" y="212" width="6" height="40" rx="3" fill="#238636"/>
+    <rect class="wave" style="animation-delay:0.15s" x="682" y="206" width="6" height="46" rx="3" fill="#2ea043"/>
+    <rect class="wave" style="animation-delay:0.30s" x="694" y="216" width="6" height="36" rx="3" fill="#3fb950"/>
+    <rect class="wave" style="animation-delay:0.45s" x="706" y="202" width="6" height="50" rx="3" fill="#56d364"/>
+    <rect class="wave" style="animation-delay:0.60s" x="718" y="210" width="6" height="42" rx="3" fill="#58a6ff"/>
+    <rect class="wave" style="animation-delay:0.75s" x="730" y="202" width="6" height="50" rx="3" fill="#56d364"/>
+    <rect class="wave" style="animation-delay:0.90s" x="742" y="216" width="6" height="36" rx="3" fill="#3fb950"/>
+    <rect class="wave" style="animation-delay:1.05s" x="754" y="206" width="6" height="46" rx="3" fill="#2ea043"/>
+    <rect class="wave" style="animation-delay:1.20s" x="766" y="212" width="6" height="40" rx="3" fill="#238636"/>
+    <text class="mono" x="724" y="272" font-size="10" fill="#8b949e" text-anchor="middle">[ voice: online ]</text>
+  </g>
+</svg>

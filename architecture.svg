@@ -1,0 +1,144 @@
+<svg width="880" height="430" viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="System architecture: four layers — robotics, AI, software, infra — feeding Mission Control: automate everything. Output: systems that run alone.">
+  <title>system architecture — four layers, one mission</title>
+  <style>
+    .mono { font-family: 'Courier New', 'SFMono-Regular', Consolas, Menlo, monospace; }
+    .led { animation: ledblink 2.4s ease-in-out infinite; }
+    @keyframes ledblink { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+    .breathe { animation: breathe 2.6s ease-in-out infinite; }
+    @keyframes breathe { 0%, 100% { stroke-opacity: 0.45; } 50% { stroke-opacity: 1; } }
+  </style>
+
+  <!-- panel -->
+  <rect x="16" y="16" width="848" height="398" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <defs>
+    <pattern id="agrid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#21262d"/>
+    </pattern>
+    <path id="p1" d="M 131 170 L 131 206 Q 131 210 135 210 L 436 210 Q 440 210 440 214 L 440 240" fill="none"/>
+    <path id="p2" d="M 337 170 L 337 206 Q 337 210 341 210 L 436 210 Q 440 210 440 214 L 440 240" fill="none"/>
+    <path id="p3" d="M 543 170 L 543 206 Q 543 210 539 210 L 444 210 Q 440 210 440 214 L 440 240" fill="none"/>
+    <path id="p4" d="M 749 170 L 749 206 Q 749 210 745 210 L 444 210 Q 440 210 440 214 L 440 240" fill="none"/>
+    <path id="pout" d="M 440 310 L 440 346" fill="none"/>
+  </defs>
+  <rect x="17" y="17" width="846" height="396" rx="10" fill="url(#agrid)" opacity="0.55"/>
+
+  <text class="mono" x="36" y="46" font-size="12" fill="#8b949e">// system.architecture</text>
+  <text class="mono" x="844" y="46" font-size="12" fill="#8b949e" text-anchor="end">[ rev 2026 ]</text>
+
+  <!-- traces -->
+  <use href="#p1" xlink:href="#p1" stroke="#2d333b" stroke-width="2" stroke-linecap="round"/>
+  <use href="#p2" xlink:href="#p2" stroke="#2d333b" stroke-width="2" stroke-linecap="round"/>
+  <use href="#p3" xlink:href="#p3" stroke="#2d333b" stroke-width="2" stroke-linecap="round"/>
+  <use href="#p4" xlink:href="#p4" stroke="#2d333b" stroke-width="2" stroke-linecap="round"/>
+  <use href="#pout" xlink:href="#pout" stroke="#2d333b" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- solder pads -->
+  <circle cx="131" cy="170" r="3" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="337" cy="170" r="3" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="543" cy="170" r="3" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="749" cy="170" r="3" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="440" cy="310" r="3" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- ═══ chip: ROBOTICS (green) ═══ -->
+  <g>
+    <line x1="38" y1="82" x2="46" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="38" y1="115" x2="46" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="38" y1="148" x2="46" y2="148" stroke="#30363d" stroke-width="2"/>
+    <line x1="216" y1="82" x2="224" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="216" y1="115" x2="224" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="216" y1="148" x2="224" y2="148" stroke="#30363d" stroke-width="2"/>
+    <rect x="46" y="60" width="170" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <circle class="led" style="animation-delay:0s" cx="202" cy="76" r="3.5" fill="#3fb950"/>
+    <text class="mono" x="131" y="86" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#3fb950" text-anchor="middle">ROBOTICS</text>
+    <line x1="60" y1="98" x2="202" y2="98" stroke="#21262d" stroke-width="1"/>
+    <text class="mono" x="131" y="118" font-size="11.5" fill="#8b949e" text-anchor="middle">ESP32 · STM32</text>
+    <text class="mono" x="131" y="136" font-size="11.5" fill="#8b949e" text-anchor="middle">ROS · control</text>
+    <text class="mono" x="131" y="154" font-size="11.5" fill="#8b949e" text-anchor="middle">mech design</text>
+  </g>
+
+  <!-- ═══ chip: AI (blue) ═══ -->
+  <g>
+    <line x1="244" y1="82" x2="252" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="244" y1="115" x2="252" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="244" y1="148" x2="252" y2="148" stroke="#30363d" stroke-width="2"/>
+    <line x1="422" y1="82" x2="430" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="422" y1="115" x2="430" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="422" y1="148" x2="430" y2="148" stroke="#30363d" stroke-width="2"/>
+    <rect x="252" y="60" width="170" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <circle class="led" style="animation-delay:0.6s" cx="408" cy="76" r="3.5" fill="#58a6ff"/>
+    <text class="mono" x="337" y="86" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#58a6ff" text-anchor="middle">AI</text>
+    <line x1="266" y1="98" x2="408" y2="98" stroke="#21262d" stroke-width="1"/>
+    <text class="mono" x="337" y="118" font-size="11.5" fill="#8b949e" text-anchor="middle">n8n · agents</text>
+    <text class="mono" x="337" y="136" font-size="11.5" fill="#8b949e" text-anchor="middle">LLMs · OCR</text>
+    <text class="mono" x="337" y="154" font-size="11.5" fill="#8b949e" text-anchor="middle">in production</text>
+  </g>
+
+  <!-- ═══ chip: SOFTWARE (yellow) ═══ -->
+  <g>
+    <line x1="450" y1="82" x2="458" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="450" y1="115" x2="458" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="450" y1="148" x2="458" y2="148" stroke="#30363d" stroke-width="2"/>
+    <line x1="628" y1="82" x2="636" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="628" y1="115" x2="636" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="628" y1="148" x2="636" y2="148" stroke="#30363d" stroke-width="2"/>
+    <rect x="458" y="60" width="170" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <circle class="led" style="animation-delay:1.2s" cx="614" cy="76" r="3.5" fill="#d29922"/>
+    <text class="mono" x="543" y="86" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#d29922" text-anchor="middle">SOFTWARE</text>
+    <line x1="472" y1="98" x2="614" y2="98" stroke="#21262d" stroke-width="1"/>
+    <text class="mono" x="543" y="118" font-size="11.5" fill="#8b949e" text-anchor="middle">Python · TS</text>
+    <text class="mono" x="543" y="136" font-size="11.5" fill="#8b949e" text-anchor="middle">React · FastAPI</text>
+    <text class="mono" x="543" y="154" font-size="11.5" fill="#8b949e" text-anchor="middle">Flutter</text>
+  </g>
+
+  <!-- ═══ chip: INFRA (purple) ═══ -->
+  <g>
+    <line x1="656" y1="82" x2="664" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="656" y1="115" x2="664" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="656" y1="148" x2="664" y2="148" stroke="#30363d" stroke-width="2"/>
+    <line x1="834" y1="82" x2="842" y2="82" stroke="#30363d" stroke-width="2"/>
+    <line x1="834" y1="115" x2="842" y2="115" stroke="#30363d" stroke-width="2"/>
+    <line x1="834" y1="148" x2="842" y2="148" stroke="#30363d" stroke-width="2"/>
+    <rect x="664" y="60" width="170" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <circle class="led" style="animation-delay:1.8s" cx="820" cy="76" r="3.5" fill="#bc8cff"/>
+    <text class="mono" x="749" y="86" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#bc8cff" text-anchor="middle">INFRA</text>
+    <line x1="678" y1="98" x2="820" y2="98" stroke="#21262d" stroke-width="1"/>
+    <text class="mono" x="749" y="118" font-size="11.5" fill="#8b949e" text-anchor="middle">Docker · VPS</text>
+    <text class="mono" x="749" y="136" font-size="11.5" fill="#8b949e" text-anchor="middle">VPN · DevOps</text>
+    <text class="mono" x="749" y="154" font-size="11.5" fill="#8b949e" text-anchor="middle">self-hosted</text>
+  </g>
+
+  <!-- pulses -->
+  <g opacity="0.9">
+    <g><circle r="6" fill="#3fb950" opacity="0.25"/><circle r="2.8" fill="#3fb950"/>
+      <animateMotion dur="3s" repeatCount="indefinite" begin="0s"><mpath href="#p1" xlink:href="#p1"/></animateMotion></g>
+    <g opacity="0"><set attributeName="opacity" to="1" begin="0.75s" fill="freeze"/><circle r="6" fill="#58a6ff" opacity="0.25"/><circle r="2.8" fill="#58a6ff"/>
+      <animateMotion dur="3s" repeatCount="indefinite" begin="0.75s"><mpath href="#p2" xlink:href="#p2"/></animateMotion></g>
+    <g opacity="0"><set attributeName="opacity" to="1" begin="1.5s" fill="freeze"/><circle r="6" fill="#d29922" opacity="0.25"/><circle r="2.8" fill="#d29922"/>
+      <animateMotion dur="3s" repeatCount="indefinite" begin="1.5s"><mpath href="#p3" xlink:href="#p3"/></animateMotion></g>
+    <g opacity="0"><set attributeName="opacity" to="1" begin="2.25s" fill="freeze"/><circle r="6" fill="#bc8cff" opacity="0.25"/><circle r="2.8" fill="#bc8cff"/>
+      <animateMotion dur="3s" repeatCount="indefinite" begin="2.25s"><mpath href="#p4" xlink:href="#p4"/></animateMotion></g>
+    <g opacity="0"><set attributeName="opacity" to="1" begin="0.4s" fill="freeze"/><circle r="6" fill="#3fb950" opacity="0.25"/><circle r="2.8" fill="#3fb950"/>
+      <animateMotion dur="1.6s" repeatCount="indefinite" begin="0.4s"><mpath href="#pout" xlink:href="#pout"/></animateMotion></g>
+  </g>
+
+  <!-- MISSION CONTROL -->
+  <g>
+    <line x1="282" y1="262" x2="290" y2="262" stroke="#30363d" stroke-width="2"/>
+    <line x1="282" y1="288" x2="290" y2="288" stroke="#30363d" stroke-width="2"/>
+    <line x1="590" y1="262" x2="598" y2="262" stroke="#30363d" stroke-width="2"/>
+    <line x1="590" y1="288" x2="598" y2="288" stroke="#30363d" stroke-width="2"/>
+    <rect x="290" y="240" width="300" height="70" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+    <rect x="414" y="237" width="8" height="4" rx="1" fill="#3fb950"/>
+    <rect x="430" y="237" width="8" height="4" rx="1" fill="#58a6ff"/>
+    <rect x="446" y="237" width="8" height="4" rx="1" fill="#d29922"/>
+    <rect x="462" y="237" width="8" height="4" rx="1" fill="#bc8cff"/>
+    <text class="mono" x="440" y="272" font-size="15" font-weight="bold" letter-spacing="2" fill="#e6edf3" text-anchor="middle">MISSION CONTROL</text>
+    <text class="mono" x="440" y="293" font-size="11" fill="#3fb950" text-anchor="middle">automate everything</text>
+  </g>
+
+  <!-- output -->
+  <rect class="breathe" x="320" y="346" width="240" height="44" rx="22" fill="#0d1117" stroke="#58a6ff" stroke-width="1.8"/>
+  <text class="mono" x="440" y="373" font-size="12.5" fill="#58a6ff" text-anchor="middle">systems that run alone</text>
+
+  <text class="mono" x="838" y="402" font-size="11" fill="#8b949e" text-anchor="end">[ uptime: 24/7 ]</text>
+</svg>
