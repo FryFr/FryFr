@@ -1,12 +1,16 @@
 <!-- ============================================================
   Profile README — lives in the repo FryFr/FryFr as README.md
-  Companion files:
-    · header.svg  → commit to  assets/header.svg  (same repo)
-    · snake.yml   → commit to  .github/workflows/snake.yml
+  Companion files (path in the repo):
+    · header.svg        → assets/header.svg
+    · architecture.svg  → assets/architecture.svg
+    · stats.svg         → assets/stats.svg  (placeholder — the action refreshes it)
+    · generate_stats.py → scripts/generate_stats.py
+    · stats.yml         → .github/workflows/stats.yml
+    · snake.yml         → .github/workflows/snake.yml
   Only pending TODO: the Platica live-site link (search "TODO").
   TikTok badge is commented out — enable it when the account exists.
   If you ever rename your GitHub handle, find & replace "FryFr"
-  in the stats/snake URLs below.
+  in the activity-graph/snake URLs below.
 ============================================================ -->
 
 <div align="center">
@@ -39,28 +43,11 @@ By day I design AI automations, self-hosted infrastructure and AI adoption progr
 
 Four stacked layers that rarely live in the same engineer — the intersection is the whole point:
 
-```text
-                 ┌───────────────────────────────┐
-                 │        MISSION CONTROL        │
-                 │      automate everything      │
-                 └───────────────┬───────────────┘
-                                 │
-        ┌────────────────┬───────┴────────┬────────────────┐
-        │                │                │                │
-  ┌─────┴─────┐    ┌─────┴─────┐    ┌─────┴─────┐    ┌─────┴─────┐
-  │ ROBOTICS  │    │    AI     │    │ SOFTWARE  │    │   INFRA   │
-  ├───────────┤    ├───────────┤    ├───────────┤    ├───────────┤
-  │ ESP32     │    │ n8n       │    │ Python    │    │ Docker    │
-  │ STM32     │    │ agents    │    │ TypeScript│    │ VPS · VPN │
-  │ ROS       │    │ LLM + OCR │    │ FastAPI   │    │ self-host │
-  └─────┬─────┘    └─────┬─────┘    └─────┬─────┘    └─────┬─────┘
-        │                │                │                │
-        └────────────────┴────────┬───────┴────────────────┘
-                                  ▼
-                    ┌──────────────────────────┐
-                    │  systems that run alone  │
-                    └──────────────────────────┘
-```
+<div align="center">
+
+<img src="assets/architecture.svg" width="880" alt="Animated circuit board: ROBOTICS, AI, SOFTWARE and INFRA chips firing pulses into MISSION CONTROL (automate everything), output: systems that run alone." />
+
+</div>
 
 ## $ systemctl status projects
 
@@ -83,13 +70,13 @@ Four stacked layers that rarely live in the same engineer — the intersection i
 
 ## $ htop
 
-<!-- No top-languages card on purpose: it would read the old university
-     repos and say "Dart & C++", which misrepresents the current stack. -->
+<!-- Custom stats panel — generated daily with real API data by
+     .github/workflows/stats.yml + scripts/generate_stats.py.
+     No third-party card services (they rate-limit and break). -->
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=FryFr&show_icons=true&hide_border=true&bg_color=0d1117&title_color=3fb950&icon_color=58a6ff&text_color=c9d1d9&include_all_commits=true&count_private=true" alt="GitHub stats"/>
-<img height="170" src="https://streak-stats.demolab.com?user=FryFr&hide_border=true&background=0d1117&ring=3fb950&fire=d29922&currStreakLabel=3fb950&currStreakNum=e6edf3&sideNums=e6edf3&sideLabels=8b949e&dates=8b949e&stroke=30363d" alt="Contribution streak"/>
+<img src="assets/stats.svg" width="880" alt="Terminal-style GitHub stats panel: contributions, streak, repos, and a 30-day activity sparkline. Refreshed daily."/>
 
 <img width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=FryFr&hide_border=true&bg_color=0d1117&color=8b949e&line=3fb950&point=58a6ff&area=true&area_color=238636" alt="Contribution activity graph"/>
 
