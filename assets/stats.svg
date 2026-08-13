@@ -22,34 +22,34 @@
   <text class="mono" x="36" y="112" font-size="14" fill="#8b949e">contributions[365d] <tspan fill="#30363d">........</tspan> <tspan fill="#e6edf3" font-weight="bold">323</tspan><tspan fill="#8b949e"></tspan></text>
   <text class="mono" x="36" y="139" font-size="14" fill="#8b949e">current_streak <tspan fill="#30363d">.............</tspan> <tspan fill="#e6edf3" font-weight="bold">0</tspan><tspan fill="#8b949e"> days   (longest: 6)</tspan></text>
   <text class="mono" x="36" y="166" font-size="14" fill="#8b949e">public_repos <tspan fill="#30363d">...............</tspan> <tspan fill="#e6edf3" font-weight="bold">16</tspan><tspan fill="#8b949e"></tspan></text>
-  <text class="mono" x="36" y="193" font-size="14" fill="#8b949e">stars · followers <tspan fill="#30363d">..........</tspan> <tspan fill="#e6edf3" font-weight="bold">1 · 17</tspan><tspan fill="#8b949e"></tspan></text>
+  <text class="mono" x="36" y="193" font-size="14" fill="#8b949e">stars · followers <tspan fill="#30363d">..........</tspan> <tspan fill="#e6edf3" font-weight="bold">1 · 18</tspan><tspan fill="#8b949e"></tspan></text>
 
   <rect class="cursor" x="36" y="216" width="9" height="16" fill="#3fb950"/>
-  <text class="mono" x="52" y="228" font-size="11" fill="#8b949e">updated: 2026-08-12</text>
+  <text class="mono" x="52" y="228" font-size="11" fill="#8b949e">updated: 2026-08-13</text>
 
   <text class="mono" x="470" y="96" font-size="12" fill="#8b949e">last_30_days</text>
   <text class="mono" x="826" y="96" font-size="11" fill="#8b949e" text-anchor="end">peak: 17/day</text>
   <rect x="470" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="482" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="494" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="506" y="168" width="8" height="4" rx="1.5" fill="#3fb950"/>
-  <rect x="518" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="530" y="147" width="8" height="25" rx="1.5" fill="#3fb950"/>
-  <rect x="542" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="554" y="126" width="8" height="46" rx="1.5" fill="#3fb950"/>
-  <rect x="566" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="578" y="154" width="8" height="18" rx="1.5" fill="#3fb950"/>
+  <rect x="494" y="168" width="8" height="4" rx="1.5" fill="#3fb950"/>
+  <rect x="506" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
+  <rect x="518" y="147" width="8" height="25" rx="1.5" fill="#3fb950"/>
+  <rect x="530" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
+  <rect x="542" y="126" width="8" height="46" rx="1.5" fill="#3fb950"/>
+  <rect x="554" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
+  <rect x="566" y="154" width="8" height="18" rx="1.5" fill="#3fb950"/>
+  <rect x="578" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="590" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="602" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="614" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="626" y="112" width="8" height="60" rx="1.5" fill="#3fb950"/>
-  <rect x="638" y="165" width="8" height="7" rx="1.5" fill="#3fb950"/>
+  <rect x="614" y="112" width="8" height="60" rx="1.5" fill="#3fb950"/>
+  <rect x="626" y="165" width="8" height="7" rx="1.5" fill="#3fb950"/>
+  <rect x="638" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="650" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="662" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="674" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
-  <rect x="686" y="168" width="8" height="4" rx="1.5" fill="#3fb950"/>
-  <rect x="698" y="165" width="8" height="7" rx="1.5" fill="#3fb950"/>
-  <rect x="710" y="168" width="8" height="4" rx="1.5" fill="#3fb950"/>
+  <rect x="674" y="168" width="8" height="4" rx="1.5" fill="#3fb950"/>
+  <rect x="686" y="165" width="8" height="7" rx="1.5" fill="#3fb950"/>
+  <rect x="698" y="168" width="8" height="4" rx="1.5" fill="#3fb950"/>
+  <rect x="710" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="722" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="734" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
   <rect x="746" y="170" width="8" height="2" rx="1.5" fill="#21262d"/>
